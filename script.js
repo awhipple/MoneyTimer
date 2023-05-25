@@ -2,12 +2,22 @@ var rate = 0;
 var intervalId;
 var startTime;
 
+// Check if the hourly rate is provided in the URL parameters
+var urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has('rate')) {
+  rate = parseFloat(urlParams.get('rate'));
+  document.getElementById("rate").value = rate;
+  start();
+}
+
 function start() {
-  var rateInput = document.getElementById("rate").value;
-  if(rateInput !== "") {
-    rate = parseFloat(rateInput);
-    startTime = Date.now();
-    intervalId = setInterval(calculateMoney, 1000); // update every second
+  if (!intervalId) { // Check if the timer is not already running
+    var rateInput = document.getElementById("rate").value;
+    if(rateInput !== "") {
+      rate = parseFloat(rateInput);
+      startTime = Date.now();
+      intervalId = setInterval(calculateMoney, 1000); // update every second
+    }
   }
 }
 
