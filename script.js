@@ -20,7 +20,7 @@ function start() {
     if(rateInput !== "") {
       rate = parseFloat(rateInput);
       startTime = Date.now();
-      intervalId = setInterval(calculateMoney, 1000); // update every second
+      intervalId = setInterval(calculateMoney, 100); // update every second
     }
   }
 }
