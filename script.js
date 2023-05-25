@@ -7,6 +7,10 @@ var urlParams = new URLSearchParams(window.location.search);
 if (urlParams.has('rate')) {
   rate = parseFloat(urlParams.get('rate'));
   document.getElementById("rate").value = rate;
+  document.getElementById("rateDisplay").innerHTML = "$" + rate;
+  document.getElementById("rate").style.display = 'none';
+  document.getElementById("startBtn").style.display = 'none';
+  document.getElementById("stopBtn").style.display = 'none';
   start();
 }
 

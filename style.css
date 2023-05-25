@@ -20,6 +20,10 @@ body {
   #rate {
     width: 200px;
   }
+
+  #rateDisplay {
+    display: inline;
+  }
   
   button {
     background-color: #4CAF50;
@@ -32,7 +36,7 @@ body {
   }
   
   #money {
-    font-size: 60px;
+    font-size: 150px;
     color: #333;
     margin-top: 20px;
   }

@@ -7,13 +7,14 @@
 <body>
   <div>
     Hourly Rate: 
+    <div id="rateDisplay"></div>
     <input type="text" id="rate" placeholder="Enter rate per hour">
   </div>
   <div>
-    <button onclick="start()">Start</button>
-    <button onclick="stop()">Stop</button>
+    <button id="startBtn" onclick="start()">Start</button>
+    <button id="stopBtn" onclick="stop()">Stop</button>
   </div>
-  <div id="money">0.00</div>
+  <div id="money">$0.00</div>
   
   <script src="script.js"></script>
 </body>
